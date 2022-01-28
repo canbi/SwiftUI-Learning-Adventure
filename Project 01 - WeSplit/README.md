@@ -10,6 +10,9 @@ This project is a check-sharing app that calculates how to split a check based o
 - [x] Change the tip percentage picker to show a new screen rather than using a segmented control, and give it a wider range of options – everything from 0% to 100%. Tip: use the range 0..<101 for your range rather than a fixed array.
 - [x] Rather than having to type `.currency(code: Locale.current.currencyCode ?? "USD")` in two places, can you make a new property to store the currency formatter? You’ll need to give your property a specific return type in order to keep the rest of your code happy: `FloatingPointFormatStyle<Double>.Currency.`
 
+**Project 3 Challange**
+- [x] Go back to project 1 and use a conditional modifier to change the total amount text view to red if the user selects a 0% tip.
+
 ### Screenshots
 <img src="Screenshots/1.png" width="250" />
 

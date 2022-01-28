@@ -38,18 +38,14 @@ struct ContentView: View {
                             .font(.subheadline.weight(.heavy))
                             .foregroundStyle(.secondary)
                         Text(countries[correctAnswer])
-                            .font(.largeTitle.weight(.semibold))
-                            .foregroundStyle(.secondary)
+                            .prominentStyle()
                     }
                     
                     ForEach(0..<3) { number in
                         Button {
                             flagTapped(number)
                         } label: {
-                            Image(countries[number])
-                                .renderingMode(.original)
-                                .clipShape(Capsule())
-                                .shadow(radius: 5)
+                            FlagImage(image: countries[number])
                         }
                     }
                 }
