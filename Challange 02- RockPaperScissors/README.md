@@ -25,4 +25,3 @@ Bu projenin ilgili sayfalarına aşağıdaki bağlantılardan ulaşabilirsin �
 
 **SwiftUI öğrenme maceramın tamamına göz atmak istersen görsele tıklayabilirsin**👇
 [![name2](../Images/gungunswiftui.jpg)](https://canbi.me/gun-gun-swiftui-ogrenme-maceram)
-/var/folders/1t/c5yycnn92gdbxc55_q2dlkd40000gn/T/simulator_screenshot_BD3F6F8A-9D13-4DE1-A19B-4FD90FF106C9.png
