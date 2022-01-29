@@ -100,62 +100,29 @@ struct ContentView: View {
         VStack{
             Spacer()
             
-            GroupBox() {
-                HStack{
-                    Spacer()
-                    VStack{
-                        Text("✊✋✌️").font(.system(size: 60))
-                        Text("RockPaperScissors").font(.title).bold()
-                    }
-                    Spacer()
-                }
-            }
-            .padding(.horizontal)
-            .groupBoxStyle(PlainGroupBoxStyle())
+            LogoView()
             
             Spacer()
             
             HStack{
-                GroupBox(label: Label("🎯 Score", image: "").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)) {
-                    Text("\(userScore)").font(.largeTitle).bold()
-                }
+                ScoreView(userScore: userScore)
                 Spacer()
-                GroupBox(label: Label("🏅 Round", image: "").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)) {
-                    Text("\(roundNumber)").font(.largeTitle).bold()
-                }
+                RoundView(roundNumber: roundNumber)
             }
             .padding(.horizontal)
-            .groupBoxStyle(PlainGroupBoxStyle())
+            
             
             Spacer()
             
-            GroupBox(label: Label("🖥️ Computer", image: "").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)) {
-                HStack{
-                    Spacer()
-                    Text("Computer Will Play")
-                    Spacer()
-                    Text(choices[compChoice]).font(.system(size: 50))
-                    Spacer()
-                    VStack(alignment: .center){
-                        Text("You should")
-                        Text("\((shouldWin ? ScoreType.win : ScoreType.lose).rawValue)")
-                            .foregroundColor(shouldWin ? .green : .red)
-                            .bold()
-                    }
-                    Spacer()
+            ComputerView(computerChoice: choices[compChoice], shouldWin: shouldWin)
+                .alert(isPresented: $showingRound) {
+                    Alert(
+                        title: Text("\(roundResult.rawValue)"),
+                        message: Text("\(roundResult.rawValue == RoundResult.correct.rawValue ? "You won this round" : "You lost this round")"),
+                        dismissButton: .default(Text("Next Round")) {
+                            self.newRound()
+                        })
                 }
-            }
-            .font(.title2)
-            .padding(.horizontal)
-            .groupBoxStyle(PlainGroupBoxStyle())
-            .alert(isPresented: $showingRound) {
-                Alert(
-                    title: Text("\(roundResult.rawValue)"),
-                    message: Text("\(roundResult.rawValue == RoundResult.correct.rawValue ? "You won this round" : "You lost this round")"),
-                    dismissButton: .default(Text("Next Round")) {
-                        self.newRound()
-                    })
-            }
             
             Spacer()
             
