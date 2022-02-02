@@ -13,6 +13,11 @@ Building a guessing game that helps users learn some of the many flags of the wo
 - [x] Go back to project 2 and replace the `Image` view used for flags with a new `FlagImage()` view that renders one flag image using the specific set of modifiers we had.
 - [x] Create a custom `ViewModifier` (and accompanying `View` extension) that makes a view have a large, blue font suitable for prominent titles in a view.
 
+**Project 6 Challange**
+- [x]  When you tap a flag, make it spin around 360 degrees on the Y axis.
+- [x]  Make the other two buttons fade out to 25% opacity.
+- [x]  Add a third effect of your choosing to the two flags the user didn’t choose – maybe make them scale down? Or flip in a different direction? Experiment!
+
 ### Screenshots
 <img src="Screenshots/1.png" width="200" /> <img src="Screenshots/2.png" width="200" /> <img src="Screenshots/3.png" width="200" /> <img src="Screenshots/4.png" width="200" />
 

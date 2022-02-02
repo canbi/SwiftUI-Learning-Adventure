@@ -16,6 +16,8 @@ struct ContentView: View {
     
     @State private var answeredQuestions = 0
     @State private var showingEnd = false
+    @State private var animationAmount = 0.0
+    @State private var tappedFlag: Int? = nil
     private var questionLimit = 8
     
     var body: some View {
@@ -44,9 +46,17 @@ struct ContentView: View {
                     ForEach(0..<3) { number in
                         Button {
                             flagTapped(number)
+                            withAnimation {
+                                tappedFlag = number
+                                animationAmount += 360
+                            }
                         } label: {
                             FlagImage(image: countries[number])
+                                .colorMultiply(tappedFlag == nil ? .white : correctAnswer == number ? .white : .red)
                         }
+                        .rotation3DEffect(.degrees(tappedFlag == number ? animationAmount : 0.0), axis: (x: 0, y: 1, z: 0))
+                        .opacity(tappedFlag == nil ? 1.0 : correctAnswer == number ? 1.0 : 0.1)
+                        .scaleEffect(tappedFlag == nil ? 1.0 : correctAnswer == number ? 1.0 : 0.8)
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -99,12 +109,14 @@ struct ContentView: View {
     func askQuestion() {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        tappedFlag = nil
     }
     
     func restartGame(){
         score = 0
         answeredQuestions = 0
         askQuestion()
+        tappedFlag = nil
     }
 }
 
