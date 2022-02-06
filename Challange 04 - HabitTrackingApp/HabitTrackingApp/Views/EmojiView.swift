@@ -3,6 +3,7 @@
 //  HabitTrackingApp
 //
 //  Created by Can Bi on 21.07.2021.
+//  Updated by Can Bi on 06.02.2022.
 //
 
 import SwiftUI
@@ -10,43 +11,27 @@ import SwiftUI
 struct EmojiView : View {
     @Environment(\.presentationMode) var presentationMode
     
-    var emojis: [[String]] = [
-        ["💪","✍️","🧑‍🏫","🧑‍💻"],
-        ["💃","🕺","🏃","🚶"],
-        ["🍳","🥗","🍻","⚽️"],
-        ["🏀","🎾","🏐","🎱"],
-        ["🧗","🚵","🚴","⛹️"],
-        ["🤾","🏌️","🤽","🏄"],
-        ["🧘","🎭","🎨","🎬"],
-        ["🎹","🎧","🥁","🎸"],
-        ["🎻","🎮","🧩","🚗"],
-        ["🛵","💻","🪥","🧼"],
-        ["🛏","📨","📚","📝"]]
+    var emojis: [String] = ["💪","✍️","🧑‍🏫","🧑‍💻","💃","🕺","🏃","🚶","🍳","🥗","🍻","⚽️",
+                            "🏀","🎾","🏐","🎱","🧗","🚵","🚴","⛹️","🤾","🏌️","🤽","🏄",
+                            "🧘","🎭","🎨","🎬","🎹","🎧","🥁","🎸","🎻","🎮","🧩","🚗",
+                            "🛵","💻","🪥","🧼","🛏","📨","📚","📝"]
     
     @ObservedObject var emojiSelector = EmojiSelector()
     
+    let columns = [GridItem(.adaptive(minimum: 75))]
+    
     var body : some View{
-        ScrollView(.vertical) {
-            HStack{
-                Spacer()
-                VStack(spacing: 15){
-                    ForEach(emojis,id: \.self){i in
-                        HStack(spacing: 25){
-                            ForEach(i,id: \.self){j in
-                                Button(action: {
-                                    emojiSelector.selectedEmoji = j
-                                    presentationMode.wrappedValue.dismiss()
-                                }) {
-                                    Text("\(j)").font(.system(size: 55))
-                                }
-                            }
-                        }
+        ScrollView {
+            LazyVGrid(columns: columns) {
+                ForEach(emojis,id: \.self){ emoji in
+                    Button(action: {
+                        emojiSelector.selectedEmoji = emoji
+                        presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Text("\(emoji)").font(.system(size: 55))
                     }
                 }
-                Spacer()
-            }
-            .padding()
-            .cornerRadius(25)
+            }.padding()
         }
     }
 }

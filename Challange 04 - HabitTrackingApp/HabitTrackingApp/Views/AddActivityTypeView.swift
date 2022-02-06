@@ -3,6 +3,7 @@
 //  HabitTrackingApp
 //
 //  Created by Can Bi on 21.07.2021.
+//  Updated by Can Bi on 06.02.2022.
 //
 
 import SwiftUI
@@ -20,11 +21,8 @@ struct AddActivityTypeView: View {
     @State private var activityTypeName = ""
     @State private var selectedColor = Color(red: 0, green: 0, blue: 0, opacity: 1)
     
-    //Sheet
-    @State private var selectEmoji = false
-    
-    //Alerts
-    @State private var cantNameEmpty = false
+    @State private var selectEmoji = false //Sheet
+    @State private var cantNameEmpty = false //Alerts
     
     var body: some View {
         NavigationView {
@@ -48,9 +46,9 @@ struct AddActivityTypeView: View {
                     ColorPicker("Activity Color",selection: $selectedColor)
                     
                     TextField("Activity Type Name", text: $activityTypeName)
-
-                    }.alert(isPresented: $cantNameEmpty) {
-                        Alert(title: Text("Activity type name should be set"), message: Text("Activity type name can not be empty"), dismissButton: .default(Text("Try Again")))
+                    
+                }.alert(isPresented: $cantNameEmpty) {
+                    Alert(title: Text("Activity type name should be set"), message: Text("Activity type name can not be empty"), dismissButton: .default(Text("Try Again")))
                 }
             }
             .sheet(isPresented: $selectEmoji) {
@@ -60,13 +58,15 @@ struct AddActivityTypeView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action:{
-                        //Activity type name should be set
-                        if self.activityTypeName.count > 0 {
-                            activityTypeName = self.activityTypeName
-                            let newActivityType = ActivityType(emojiSelector.selectedEmoji, activityTypeName, selectedColor)
-                            habits.activityTypes.append(newActivityType)
-                            self.presentationMode.wrappedValue.dismiss()
-                        }else {cantNameEmpty = true }
+                        guard self.activityTypeName.count > 0 else {
+                            cantNameEmpty = true
+                            return
+                        }
+                        
+                        activityTypeName = self.activityTypeName
+                        let newActivityType = ActivityType(emojiSelector.selectedEmoji, activityTypeName, selectedColor)
+                        habits.activityTypes.append(newActivityType)
+                        self.presentationMode.wrappedValue.dismiss()
                     }){
                         HStack {
                             Image(systemName: "square.and.arrow.down.on.square.fill")
@@ -76,7 +76,6 @@ struct AddActivityTypeView: View {
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action:{
-                        //Close sheet
                         presentationMode.wrappedValue.dismiss()
                     }){
                         HStack {

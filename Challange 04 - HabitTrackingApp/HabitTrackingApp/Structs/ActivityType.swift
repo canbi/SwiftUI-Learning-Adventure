@@ -3,6 +3,7 @@
 //  HabitTrackingApp
 //
 //  Created by Can Bi on 21.07.2021.
+//  Updated by Can Bi on 06.02.2022.
 //
 
 import Foundation
@@ -19,14 +20,4 @@ struct ActivityType: Codable{
         self.color = typeColor
     }
     
-}
-
-struct TrackingType: Codable{
-    let value: String
-    let color: Color
-    
-    init(_ value: String, _ color: Color) {
-        self.value = value
-        self.color = color
-    }
 }

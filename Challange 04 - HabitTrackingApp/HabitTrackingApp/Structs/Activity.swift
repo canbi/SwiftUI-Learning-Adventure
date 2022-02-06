@@ -3,6 +3,7 @@
 //  HabitTrackingApp
 //
 //  Created by Can Bi on 21.07.2021.
+//  Updated by Can Bi on 06.02.2022.
 //
 
 import Foundation
@@ -10,95 +11,20 @@ import SwiftUI
 
 struct Activity: Codable, Identifiable{
     var id = UUID()
-    let title: String
-    let description: String
+    var title: String
+    var description: String
     let startDate: Date
-    
-    //runnning, jogging, swimming, reading...
-    let activityType: ActivityType
-    
-    //tracking total time, tracking number of times
-    let trackingType: String
-    
-    //Daily, 2day, 3day, weekly, monthly, yearly
-    let routine: String
-    
-    //user activity goal
-    let milestone: TrackingType
-    
-    //user can write notes day by day
-    //everytime they should add only 1 note
-    let userNotes: [String]
-    
-    var goalProgress: String {
-        var progress = 0
-        //TODO calculate progress in %
-        progress = 37
-        
-        return "%\(progress)"
-    }
-}
-
-//http://brunowernimont.me/howtos/make-swiftui-color-codable
-#if os(iOS)
-import UIKit
-#elseif os(watchOS)
-import WatchKit
-#elseif os(macOS)
-import AppKit
-#endif
-
-fileprivate extension Color {
-    #if os(macOS)
-    typealias SystemColor = NSColor
-    #else
-    typealias SystemColor = UIColor
-    #endif
-    
-    var colorComponents: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)? {
-        var r: CGFloat = 0
-        var g: CGFloat = 0
-        var b: CGFloat = 0
-        var a: CGFloat = 0
-        
-        #if os(macOS)
-        SystemColor(self).getRed(&r, green: &g, blue: &b, alpha: &a)
-        // Note that non RGB color will raise an exception, that I don't now how to catch because it is an Objc exception.
-        #else
-        guard SystemColor(self).getRed(&r, green: &g, blue: &b, alpha: &a) else {
-            // Pay attention that the color should be convertible into RGB format
-            // Colors using hue, saturation and brightness won't work
-            return nil
-        }
-        #endif
-        
-        return (r, g, b, a)
-    }
-}
-
-extension Color: Codable {
-    enum CodingKeys: String, CodingKey {
-        case red, green, blue
+    var activityType: ActivityType //runnning, jogging, swimming, reading...
+    var trackingType: String //tracking total time, tracking number of times
+    var routine: String //Daily, 2day, 3day, weekly, monthly, yearly
+    var milestone: TrackingType //user activity goal
+    var userNotes: [String]
+    var goalProgress: Int {
+        let progress = 37
+        return progress
     }
     
-    public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        let r = try container.decode(Double.self, forKey: .red)
-        let g = try container.decode(Double.self, forKey: .green)
-        let b = try container.decode(Double.self, forKey: .blue)
-        
-        self.init(red: r, green: g, blue: b)
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        guard let colorComponents = self.colorComponents else {
-            return
-        }
-        
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        
-        try container.encode(colorComponents.red, forKey: .red)
-        try container.encode(colorComponents.green, forKey: .green)
-        try container.encode(colorComponents.blue, forKey: .blue)
+    mutating func appendNote(newNote: String){
+        self.userNotes.append(newNote)
     }
 }

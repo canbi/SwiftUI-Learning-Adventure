@@ -5,9 +5,12 @@
 Building a habit-tracking app, for folks who want to keep track of how much they do certain things. That might be learning a language, practicing an instrument, exercising, or whatever – they get to decide which activities they add, and track it however they want.
 
 ### Dark UI Screenshots
-![image info](Screenshots/dark.png)
+<img src="Screenshots/dark1.png" width="200" /><img src="Screenshots/dark2.png" width="200" /><img src="Screenshots/dark3.png" width="200" /><img src="Screenshots/dark4.png" width="200" />
+<img src="Screenshots/dark5.png" width="200" /><img src="Screenshots/dark6.png" width="200" /><img src="Screenshots/dark7.png" width="200" /><img src="Screenshots/dark8.png" width="200" />
+
 ### Light UI Screenshots
-![image info](Screenshots/light.png)
+<img src="Screenshots/light1.png" width="200" /><img src="Screenshots/light2.png" width="200" /><img src="Screenshots/light3.png" width="200" /><img src="Screenshots/light4.png" width="200" />
+<img src="Screenshots/light5.png" width="200" /><img src="Screenshots/light6.png" width="200" /><img src="Screenshots/light7.png" width="200" /><img src="Screenshots/light8.png" width="200" />
 
 Bu projenin ilgili sayfalarına aşağıdaki bağlantılardan ulaşabilirsin 👇
 * [06.02.2022 💥](https://canbi.me/06-02-2022-cff1c734a8d74415b9657c9458ea8246)
