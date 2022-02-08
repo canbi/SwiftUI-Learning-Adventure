@@ -14,13 +14,19 @@ struct DetailView: View {
     
     let book: Book
     
+    static let dateFormat: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        return formatter
+    }()
+    
     var body: some View {
         ScrollView {
             ZStack(alignment: .bottomTrailing) {
                 Image(book.genre ?? "Fantasy")
                     .resizable()
                     .scaledToFit()
-
+                
                 Text(book.genre?.uppercased() ?? "FANTASY")
                     .font(.caption)
                     .fontWeight(.black)
@@ -34,10 +40,16 @@ struct DetailView: View {
             Text(book.author ?? "Unknown author")
                 .font(.title)
                 .foregroundColor(.secondary)
-
+            
+            if let date = book.date {
+                Text("Read on \(DetailView.dateFormat.string(from: date))")
+                    .font(.body)
+                    .foregroundColor(.secondary)
+            }
+            
             Text(book.review ?? "No review")
                 .padding()
-
+            
             RatingView(rating: .constant(Int(book.rating)))
                 .font(.largeTitle)
         }

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360C631327B2C07300B644E8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 360C631227B2C07300B644E8 /* README.md */; };
+		360C631B27B2C7BB00B644E8 /* dark3.png in Resources */ = {isa = PBXBuildFile; fileRef = 360C631527B2C7BB00B644E8 /* dark3.png */; };
+		360C631C27B2C7BB00B644E8 /* light3.png in Resources */ = {isa = PBXBuildFile; fileRef = 360C631627B2C7BB00B644E8 /* light3.png */; };
+		360C631D27B2C7BB00B644E8 /* dark2.png in Resources */ = {isa = PBXBuildFile; fileRef = 360C631727B2C7BB00B644E8 /* dark2.png */; };
+		360C631E27B2C7BB00B644E8 /* dark1.png in Resources */ = {isa = PBXBuildFile; fileRef = 360C631827B2C7BB00B644E8 /* dark1.png */; };
+		360C631F27B2C7BB00B644E8 /* light2.png in Resources */ = {isa = PBXBuildFile; fileRef = 360C631927B2C7BB00B644E8 /* light2.png */; };
+		360C632027B2C7BB00B644E8 /* light1.png in Resources */ = {isa = PBXBuildFile; fileRef = 360C631A27B2C7BB00B644E8 /* light1.png */; };
 		3625EC2727B1927A006B9000 /* BookwormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3625EC2627B1927A006B9000 /* BookwormApp.swift */; };
 		3625EC2927B1927A006B9000 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3625EC2827B1927A006B9000 /* ContentView.swift */; };
 		3625EC2B27B1927B006B9000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3625EC2A27B1927B006B9000 /* Assets.xcassets */; };
@@ -20,6 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		360C631227B2C07300B644E8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		360C631527B2C7BB00B644E8 /* dark3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dark3.png; sourceTree = "<group>"; };
+		360C631627B2C7BB00B644E8 /* light3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light3.png; sourceTree = "<group>"; };
+		360C631727B2C7BB00B644E8 /* dark2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dark2.png; sourceTree = "<group>"; };
+		360C631827B2C7BB00B644E8 /* dark1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dark1.png; sourceTree = "<group>"; };
+		360C631927B2C7BB00B644E8 /* light2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light2.png; sourceTree = "<group>"; };
+		360C631A27B2C7BB00B644E8 /* light1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light1.png; sourceTree = "<group>"; };
 		3625EC2327B1927A006B9000 /* Bookworm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookworm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3625EC2627B1927A006B9000 /* BookwormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormApp.swift; sourceTree = "<group>"; };
 		3625EC2827B1927A006B9000 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,9 +58,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		360C631127B2C01C00B644E8 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				360C631827B2C7BB00B644E8 /* dark1.png */,
+				360C631727B2C7BB00B644E8 /* dark2.png */,
+				360C631527B2C7BB00B644E8 /* dark3.png */,
+				360C631A27B2C7BB00B644E8 /* light1.png */,
+				360C631927B2C7BB00B644E8 /* light2.png */,
+				360C631627B2C7BB00B644E8 /* light3.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
+		360C631427B2C0D900B644E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3625EC3F27B1AC17006B9000 /* DetailView.swift */,
+				3625EC3D27B1AAB0006B9000 /* EmojiRatingView.swift */,
+				3625EC3B27B1A9B8006B9000 /* RatingView.swift */,
+				3625EC3927B19B33006B9000 /* AddBookView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		3625EC1A27B1927A006B9000 = {
 			isa = PBXGroup;
 			children = (
+				360C631227B2C07300B644E8 /* README.md */,
+				360C631127B2C01C00B644E8 /* Screenshots */,
 				3625EC2527B1927A006B9000 /* Bookworm */,
 				3625EC2427B1927A006B9000 /* Products */,
 			);
@@ -63,16 +103,13 @@
 		3625EC2527B1927A006B9000 /* Bookworm */ = {
 			isa = PBXGroup;
 			children = (
-				3625EC3F27B1AC17006B9000 /* DetailView.swift */,
+				360C631427B2C0D900B644E8 /* Views */,
 				3625EC2627B1927A006B9000 /* BookwormApp.swift */,
 				3625EC2827B1927A006B9000 /* ContentView.swift */,
-				3625EC3D27B1AAB0006B9000 /* EmojiRatingView.swift */,
-				3625EC3B27B1A9B8006B9000 /* RatingView.swift */,
+				3625EC3727B19934006B9000 /* DataController.swift */,
 				3625EC3427B1954B006B9000 /* Bookworm.xcdatamodeld */,
 				3625EC2A27B1927B006B9000 /* Assets.xcassets */,
-				3625EC3727B19934006B9000 /* DataController.swift */,
 				3625EC2C27B1927B006B9000 /* Preview Content */,
-				3625EC3927B19B33006B9000 /* AddBookView.swift */,
 			);
 			path = Bookworm;
 			sourceTree = "<group>";
@@ -143,8 +180,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360C631327B2C07300B644E8 /* README.md in Resources */,
+				360C631E27B2C7BB00B644E8 /* dark1.png in Resources */,
+				360C631C27B2C7BB00B644E8 /* light3.png in Resources */,
+				360C631B27B2C7BB00B644E8 /* dark3.png in Resources */,
 				3625EC2E27B1927B006B9000 /* Preview Assets.xcassets in Resources */,
+				360C631D27B2C7BB00B644E8 /* dark2.png in Resources */,
 				3625EC2B27B1927B006B9000 /* Assets.xcassets in Resources */,
+				360C631F27B2C7BB00B644E8 /* light2.png in Resources */,
+				360C632027B2C7BB00B644E8 /* light1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +264,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -275,7 +319,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -300,6 +344,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,6 +373,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

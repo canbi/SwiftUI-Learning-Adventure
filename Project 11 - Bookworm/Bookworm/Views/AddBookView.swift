@@ -42,7 +42,7 @@ struct AddBookView: View {
 
                 Section {
                     Button("Save") {
-                        // add the book
+                        //Adding Book
                         let newBook = Book(context: moc)
                         newBook.id = UUID()
                         newBook.title = title
@@ -50,14 +50,25 @@ struct AddBookView: View {
                         newBook.rating = Int16(rating)
                         newBook.genre = genre
                         newBook.review = review
-
+                        newBook.date = Date.now
                         try? moc.save()
+                        
                         dismiss()
                     }
-                }
+                }.disabled(hasValidInfo() == false)
             }
             .navigationTitle("Add Book")
         }
+    }
+    
+    func hasValidInfo() -> Bool {
+        if title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+            || author.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+            || genre.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            return false
+        }
+
+        return true
     }
 }
 
