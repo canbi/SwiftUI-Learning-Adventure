@@ -16,6 +16,7 @@ An app to track which books you’ve read and what you thought of them.
 <img src="Screenshots/light1.png" width="200" /> <img src="Screenshots/light2.png" width="200" /> <img src="Screenshots/light3.png" width="200" />
 
 Bu projenin ilgili sayfalarına aşağıdaki bağlantılardan ulaşabilirsin 👇
+* [07.02.2022 🎁](https://canbi.me/07-02-2022-f4be7c946f6949a7af12b8f9c0e0496c)
 * [08.02.2022 🧛🏻](https://canbi.me/08-02-2022-510a1e3f2ef045b18a49bbe6ebaf306b)
 
 **SwiftUI öğrenme maceramın tamamına göz atmak istersen görsele tıklayabilirsin**👇
