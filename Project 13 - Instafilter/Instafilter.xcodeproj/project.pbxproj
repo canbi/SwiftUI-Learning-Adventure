@@ -28,6 +28,8 @@
 		36C0D0EC27B6F15C005C5757 /* light3.png in Resources */ = {isa = PBXBuildFile; fileRef = 36C0D0DE27B6F15C005C5757 /* light3.png */; };
 		36C0D0ED27B6F15C005C5757 /* dark3.png in Resources */ = {isa = PBXBuildFile; fileRef = 36C0D0DF27B6F15C005C5757 /* dark3.png */; };
 		36C0D0EE27B6F15C005C5757 /* dark4.png in Resources */ = {isa = PBXBuildFile; fileRef = 36C0D0E027B6F15C005C5757 /* dark4.png */; };
+		36E6E26E27B78829003182A8 /* dark8.png in Resources */ = {isa = PBXBuildFile; fileRef = 36E6E26C27B78829003182A8 /* dark8.png */; };
+		36E6E26F27B78829003182A8 /* light8.png in Resources */ = {isa = PBXBuildFile; fileRef = 36E6E26D27B78829003182A8 /* light8.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		36C0D0DE27B6F15C005C5757 /* light3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light3.png; sourceTree = "<group>"; };
 		36C0D0DF27B6F15C005C5757 /* dark3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dark3.png; sourceTree = "<group>"; };
 		36C0D0E027B6F15C005C5757 /* dark4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dark4.png; sourceTree = "<group>"; };
+		36E6E26C27B78829003182A8 /* dark8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dark8.png; sourceTree = "<group>"; };
+		36E6E26D27B78829003182A8 /* light8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light8.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 				36C0D0DB27B6F15C005C5757 /* dark5.png */,
 				36C0D0D927B6F15C005C5757 /* dark6.png */,
 				36C0D0D527B6F15C005C5757 /* dark7.png */,
+				36E6E26C27B78829003182A8 /* dark8.png */,
 				36C0D0DD27B6F15C005C5757 /* light1.png */,
 				36C0D0D627B6F15C005C5757 /* light2.png */,
 				36C0D0DE27B6F15C005C5757 /* light3.png */,
@@ -122,6 +127,7 @@
 				36C0D0DA27B6F15C005C5757 /* light5.png */,
 				36C0D0D327B6F15B005C5757 /* light6.png */,
 				36C0D0D827B6F15C005C5757 /* light7.png */,
+				36E6E26D27B78829003182A8 /* light8.png */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";
@@ -187,6 +193,7 @@
 				36C0D0E527B6F15C005C5757 /* dark2.png in Resources */,
 				36C0D0ED27B6F15C005C5757 /* dark3.png in Resources */,
 				36C0D0D227B6EEB6005C5757 /* README.md in Resources */,
+				36E6E26F27B78829003182A8 /* light8.png in Resources */,
 				36C0D0E627B6F15C005C5757 /* light7.png in Resources */,
 				36C0D0E327B6F15C005C5757 /* dark7.png in Resources */,
 				36C0D0E727B6F15C005C5757 /* dark6.png in Resources */,
@@ -200,6 +207,7 @@
 				36C0D0E827B6F15C005C5757 /* light5.png in Resources */,
 				36C0D0E127B6F15C005C5757 /* light6.png in Resources */,
 				36C0D0EE27B6F15C005C5757 /* dark4.png in Resources */,
+				36E6E26E27B78829003182A8 /* dark8.png in Resources */,
 				36C0D0E227B6F15C005C5757 /* dark1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
