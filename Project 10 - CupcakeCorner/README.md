@@ -4,10 +4,13 @@
 ### Objective
 A multi-screen app for ordering cupcakes
 
-### Challanges
+### Challenges
 - [x]  Our address fields are currently considered valid if they contain anything, even if it’s just only whitespace. Improve the validation to make sure a string of pure whitespace is invalid.
 - [x]  If our call to `placeOrder()` fails – for example if there is no internet connection – show an informative alert for the user. To test this, try commenting out the `request.httpMethod = "POST"` line in your code, which should force the request to fail.
 - [ ]  For a more challenging task, see if you can convert our data model from a class to a struct, then create an `ObservableObject` class wrapper around it that gets passed around. This will result in your class having one `@Published` property, which is the data struct inside it, and should make supporting `Codable` on the struct much easier.
+
+### Project 15 Challenge
+- [x]  The check out view in Cupcake Corner uses an image and loading spinner that don’t add anything to the UI, so find a way to make the screenreader not read them out.
 
 ### Dark UI Screenshots
 <img src="Screenshots/dark1.png" width="200" /> <img src="Screenshots/dark2.png" width="200" /> <img src="Screenshots/dark3.png" width="200" /> <img src="Screenshots/dark4.png" width="200" />

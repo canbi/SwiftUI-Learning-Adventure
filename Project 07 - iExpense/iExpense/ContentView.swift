@@ -23,12 +23,13 @@ struct ContentView: View {
                                     .font(.headline)
                                 Text(item.type.rawValue)
                             }
-                            
                             Spacer()
                             Text(item.amount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
                                 .foregroundColor(colorStatus(for: item.amount))
-                            
                         }
+                        .accessibilityElement(children: .ignore)
+                        .accessibilityLabel("\(item.name) \(item.amount.formatted())")
+                        .accessibilityHint("\(item.type.rawValue)")
                     }.onDelete(perform: removeItems)
                     
                     expenses.items.filter{$0.type == ExpenseType.Personal}.count == 0 ? Text("No Expense") : nil
