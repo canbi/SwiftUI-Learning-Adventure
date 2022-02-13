@@ -29,6 +29,7 @@
 		360E9E4527B7E1C00071E2C6 /* dark1.png in Resources */ = {isa = PBXBuildFile; fileRef = 360E9E3927B7E1C00071E2C6 /* dark1.png */; };
 		360E9E4627B7E1C00071E2C6 /* dark6.png in Resources */ = {isa = PBXBuildFile; fileRef = 360E9E3A27B7E1C00071E2C6 /* dark6.png */; };
 		360E9E4727B7E1C00071E2C6 /* light4.png in Resources */ = {isa = PBXBuildFile; fileRef = 360E9E3B27B7E1C00071E2C6 /* light4.png */; };
+		367D8A8527B920A100450EC6 /* EditView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367D8A8427B920A100450EC6 /* EditView-ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		360E9E3927B7E1C00071E2C6 /* dark1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dark1.png; sourceTree = "<group>"; };
 		360E9E3A27B7E1C00071E2C6 /* dark6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dark6.png; sourceTree = "<group>"; };
 		360E9E3B27B7E1C00071E2C6 /* light4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light4.png; sourceTree = "<group>"; };
+		367D8A8427B920A100450EC6 /* EditView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditView-ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +96,11 @@
 				360E9E2927B7D6800071E2C6 /* ContentView-ViewModel.swift */,
 				360E9E1527B7B1B90071E2C6 /* ContentView.swift */,
 				360E9E2327B7C9B90071E2C6 /* EditView.swift */,
+				367D8A8427B920A100450EC6 /* EditView-ViewModel.swift */,
 				360E9E2B27B7DBEB0071E2C6 /* FileManager.swift */,
 				360E9E2127B7BC540071E2C6 /* Location.swift */,
-				360E9E1927B7B1BA0071E2C6 /* Preview Content */,
 				360E9E2727B7D1D00071E2C6 /* Result.swift */,
+				360E9E1927B7B1BA0071E2C6 /* Preview Content */,
 			);
 			path = BucketList;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				360E9E2827B7D1D00071E2C6 /* Result.swift in Sources */,
 				360E9E2C27B7DBEB0071E2C6 /* FileManager.swift in Sources */,
 				360E9E2227B7BC540071E2C6 /* Location.swift in Sources */,
+				367D8A8527B920A100450EC6 /* EditView-ViewModel.swift in Sources */,
 				360E9E2427B7C9B90071E2C6 /* EditView.swift in Sources */,
 				360E9E1427B7B1B90071E2C6 /* BucketListApp.swift in Sources */,
 			);

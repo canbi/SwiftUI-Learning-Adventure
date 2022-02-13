@@ -15,6 +15,7 @@ extension ContentView {
         @Published private(set) var locations: [Location]
         @Published var selectedPlace: Location?
         @Published var isUnlocked = false
+        //@Published var showingNotAuthAlert = false
         
         let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedPlaces")
         
@@ -66,6 +67,10 @@ extension ContentView {
                         }
                     } else {
                         // error
+                        /* Didn't work as I expected
+                         Task{ @MainActor in
+                            self.showingNotAuthAlert = true
+                        }*/
                     }
                 }
             } else {
