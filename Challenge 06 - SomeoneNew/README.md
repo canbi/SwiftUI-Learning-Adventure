@@ -11,6 +11,7 @@ An app that asks users to import a picture from their photo library, then attach
 <img src="Screenshots/light-1.png" width="200" /><img src="Screenshots/light-2.png" width="200" /><img src="Screenshots/light-3.png" width="200" /> <img src="Screenshots/light-4.png" width="200" /> <img src="Screenshots/light-5.png" width="200" /> <img src="Screenshots/light-6.png" width="200" />
 
 Bu projenin ilgili sayfalarına aşağıdaki bağlantılardan ulaşabilirsin 👇
+* [15.02.2022 🏯](https://canbi.me/15-02-2022-0f2ffc3f7b6a4177863d0f4d5d73ef5f)
 * [18.02.2022 ⏱️](https://canbi.me/18-02-2022-b5e176f4f7304a9c9a1bfd874a35549e)
 
 **SwiftUI öğrenme maceramın tamamına göz atmak istersen görsele tıklayabilirsin**👇
