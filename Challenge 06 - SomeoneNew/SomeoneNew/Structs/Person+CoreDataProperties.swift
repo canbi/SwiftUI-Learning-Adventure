@@ -16,13 +16,12 @@ extension Person {
         return NSFetchRequest<Person>(entityName: "Person")
     }
 
-    @NSManaged public var id: UUID?
-    @NSManaged public var name: String?
     @NSManaged public var desc: String?
+    @NSManaged public var id: UUID?
+    @NSManaged public var latitude: Double
+    @NSManaged public var longitude: Double
+    @NSManaged public var name: String?
     @NSManaged public var photoName: String?
-    @NSManaged public var latitude: Double?
-    @NSManaged public var longitude: Double?
-    
     
     var wrappedName: String {
         name ?? "Unknown"
@@ -35,15 +34,6 @@ extension Person {
     var wrappedPhotoName: String {
         photoName ?? "no_photo"
     }
-    
-    var wrappedLatitude: Double {
-        latitude ?? 41.0082
-    }
-    
-    var wrappedLongitude: Double {
-        longitude ?? 28.9784
-    }
-
 }
 
 extension Person : Identifiable {

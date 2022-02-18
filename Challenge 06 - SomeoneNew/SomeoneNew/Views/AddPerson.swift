@@ -13,10 +13,15 @@ struct AddPerson: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var fileManager: LocalFileManager
     
+    let locationFetcher = LocationFetcher()
+    
     var uiImage: UIImage?
     private var image: Image?
     @State private var name = ""
     @State private var description = ""
+    @State private var longitude = 28.979530
+    @State private var latitude = 41.015137
+    @State private var currentLocation = false
     
     @State private var showingMissingError = false
     
@@ -42,6 +47,24 @@ struct AddPerson: View {
                     TextField("Name*", text: $name)
                     TextField("Description", text: $description)
                 }
+                Section(header: Text("Where you meet?")){
+                    if currentLocation == false {
+                        Button("Add current location") {
+                           if let location = self.locationFetcher.lastKnownLocation {
+                               longitude = location.longitude
+                               latitude = location.latitude
+                               currentLocation = true
+                               print("Your location is \(location)")
+                           } else {
+                               print("Your location is unknown")
+                           }
+                       }
+                    }
+                    else {
+                        Text("Location saved")
+                    }
+                }
+                
                 Button("Save", action: savePerson)
             }
         }
@@ -50,8 +73,11 @@ struct AddPerson: View {
         } message: {
             Text("Name should be given")
         }
+        .onAppear {
+            self.locationFetcher.start()
+        }
     }
-        
+    
     func savePerson(){
         guard !name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
             showingMissingError = true
@@ -69,6 +95,8 @@ struct AddPerson: View {
         tempPerson.id = UUID()
         tempPerson.name = name
         tempPerson.desc = description == "" ? nil : description
+        tempPerson.latitude = latitude
+        tempPerson.longitude = longitude
         tempPerson.photoName = randomPhotoName
         
         if moc.hasChanges {
