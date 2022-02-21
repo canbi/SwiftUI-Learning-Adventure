@@ -12,9 +12,9 @@ An app that helps users roll dice then store the results they had.
 - [x]  For a real challenge, make the value rolled by the dice flick through various possible values before settling on the final figure.
 
 ### Dark UI Screenshots
-<img src="Screenshots/dark-1.png" width="200" /><img src="Screenshots/dark-2.png" width="200" /><img src="Screenshots/dark-3.png" width="200" /> <img src="Screenshots/dark-4.png" width="200" /> <img src="Screenshots/dark-5.png" width="200" /> 
+<img src="Screenshots/dark1.png" width="200" /><img src="Screenshots/dark2.png" width="200" /><img src="Screenshots/dark3.png" width="200" /> <img src="Screenshots/dark4.png" width="200" /> <img src="Screenshots/dark5.png" width="200" /> 
 ### Light UI Screenshots
-<img src="Screenshots/light-1.png" width="200" /><img src="Screenshots/light-2.png" width="200" /><img src="Screenshots/light-3.png" width="200" /> <img src="Screenshots/light-4.png" width="200" /> <img src="Screenshots/light-5.png" width="200" />
+<img src="Screenshots/light1.png" width="200" /><img src="Screenshots/light2.png" width="200" /><img src="Screenshots/light3.png" width="200" /> <img src="Screenshots/light4.png" width="200" /> <img src="Screenshots/light5.png" width="200" />
 
 Bu projenin ilgili sayfalarına aşağıdaki bağlantılardan ulaşabilirsin 👇
 * [21.02.2022 ⛺](https://canbi.me/21-02-2022-7f18f079387e483f920add7ba6b026e2)
