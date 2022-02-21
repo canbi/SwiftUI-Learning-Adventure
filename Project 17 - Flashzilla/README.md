@@ -1,4 +1,4 @@
-# Gün Gün SwiftUI Öğrenme Maceram - Gün 68-73 🚀
+# Gün Gün SwiftUI Öğrenme Maceram - Gün 86-91 🚀
 [Hacking With Swift - 100 days of SwiftUI](https://www.hackingwithswift.com/100/swiftui) eğitimini tamamlama maceramı aynı zamanda yazıya da döküyorum ✌️
 
 ### Objective
