@@ -7,8 +7,11 @@ SwiftUI öğrenme macerama ilk başta [Hacking With Swift - 100 days of SwiftUI]
 
 ### Takip Ettiğim Eğitimler, İçerikler ve Kaynaklar 📚
 * [Hacking With Swift - 100 days of SwiftUI](https://www.hackingwithswift.com/100/swiftui) - **TAMAMLANDI** 🥳
-* [SwiftUI Views Mastery (iOS 15)](https://www.bigmountainstudio.com/views-15)
-* [Working with Data in SwiftUI](https://www.bigmountainstudio.com/data)
+* [SwiftUI Views Mastery (iOS 15)](https://www.bigmountainstudio.com/views-15) - **TAMAMLANDI** 🥳
+* [Working with Data in SwiftUI](https://www.bigmountainstudio.com/data) - **TAMAMLANDI** 🥳
+* [Swiftful Thinking - Beginner Level Playlist](https://www.youtube.com/c/SwiftfulThinking/featured) - **TAMAMLANDI** 🥳
+* [Swiftful Thinking - Intermediate Level Playlist](https://www.youtube.com/c/SwiftfulThinking/featured) - **TAMAMLANDI** 🥳
+* [Swiftful Thinking - Advanced Level Playlist](https://www.youtube.com/c/SwiftfulThinking/featured) - **TAMAMLANDI** 🥳
 
 ### SwiftUI öğrenme macerama göz atmak istersen görsele tıklayabilirsin👇
 [![](Images/gungunswiftui.jpg)](https://canbi.me/gun-gun-swiftui-ogrenme-maceram)
