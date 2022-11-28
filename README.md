@@ -14,7 +14,7 @@ SwiftUI öğrenme macerama ilk başta [Hacking With Swift - 100 days of SwiftUI]
 * [Swiftful Thinking - Advanced Level Playlist](https://www.youtube.com/c/SwiftfulThinking/featured) - **TAMAMLANDI** 🥳
 
 ### SwiftUI öğrenme macerama göz atmak istersen görsele tıklayabilirsin👇
-[![](Images/gungunswiftui.jpg)](https://canbi.me/gun-gun-swiftui-ogrenme-maceram)
+[![](Images/gungunswiftui.jpg)](https://can.bi/yazilimci-gunlugu)
 
 ### Başarılar 🏆
 <img src="Images/certificate.jpg" width="600" />
